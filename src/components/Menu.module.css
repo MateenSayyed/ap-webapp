@@ -1,0 +1,107 @@
+.login {
+  color: rgb(237, 88, 12);
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 2rem;
+  padding-bottom: 2rem;
+}
+.login svg {
+  fill: rgb(237, 88, 12);
+}
+
+.login:hover {
+  color: rgb(194 45 1);
+  cursor: pointer;
+}
+
+.login:hover svg {
+  fill: rgb(194 45 1);
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25%;
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
+  padding: 3rem 1rem;
+  color: rgb(71 85 105);
+  font-size: 1.4rem;
+  font-weight: 500;
+  transition: right 1s ease;
+  overflow-y: scroll;
+}
+
+.container.active {
+  right: 0;
+}
+.shadow {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 75%;
+  height: 100vh;
+  background-color: #858d9986;
+  transition: opacity 5s ease;
+}
+
+.shadow.activeShadow {
+  opacity: 1;
+}
+
+li {
+  justify-self: center;
+  padding: 1rem;
+
+  border-radius: 6px;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+ul,
+h4 {
+  padding-top: 1.8rem;
+}
+
+li:hover {
+  cursor: pointer;
+  background-color: #dddddd5e;
+}
+h4 {
+  font-size: 1.3rem;
+}
+
+.container div {
+  border-bottom: 1px solid rgb(209, 213, 219);
+}
+
+.closeBtn {
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 2rem;
+  right: 30rem;
+  height: 4rem;
+  width: 4rem;
+  background-color: var(--color-white);
+  border-radius: 50%;
+}
+
+.closeBtn:hover {
+  background-color: rgb(255 255 255);
+}
+
+.closeBtn svg {
+  fill: rgb(30 41 59);
+  height: 1.3rem;
+  width: 1.3rem;
+}
