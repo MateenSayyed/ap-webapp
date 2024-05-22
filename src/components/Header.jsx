@@ -1,4 +1,5 @@
 import styles from "./Header.module.css";
+
 import { useState } from "react";
 import Dropdown from "./Dropdown";
 import Menu from "./Menu";
@@ -23,6 +24,7 @@ function Header() {
             <div>
               <a href="#">
                 <img
+                  className={styles.sitelogo}
                   src="https://acharyaprashant.org/images/ic_favicon.png"
                   alt="Acharya Prashant"
                 />
@@ -39,6 +41,7 @@ function Header() {
                   items={dropdownItemsLive}
                   menuWidth="22rem"
                   menuPosition="left"
+                  color="red"
                 />
               </a>
             </div>
@@ -62,6 +65,7 @@ function Header() {
                   items={dropdownItemsInvite}
                   menuWidth="14rem"
                   menuPosition="left"
+                  color="red"
                 />
               </a>
             </div>
@@ -83,6 +87,7 @@ function Header() {
                   items={dropdownItemsLang}
                   menuWidth="8rem"
                   menuPosition="right"
+                  color="red"
                 />
               </a>
             </div>

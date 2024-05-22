@@ -12,7 +12,7 @@ a {
   color: var(--color-white);
 }
 
-img {
+.sitelogo {
   margin-top: 0.5rem;
   margin-right: 0.2rem;
   width: 3.2rem;
@@ -39,6 +39,8 @@ span {
 }
 
 .wrapper {
+  max-width: 153.6rem;
+  margin: 0 auto;
   display: flex;
   padding: 0 1.6rem;
   justify-content: space-between;

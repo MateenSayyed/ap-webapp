@@ -1,0 +1,84 @@
+.footOuterContainer {
+  background-color: rgb(15, 23, 42);
+  color: white;
+}
+
+.footContainer {
+  max-width: 153.6rem;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+}
+
+.linkContainer {
+  display: flex;
+  gap: 2rem;
+}
+
+.linkWrap {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+.linkWrap h2 {
+  font-size: 1.7rem;
+}
+
+.linkWrap span,
+.linkWrap a {
+  font-size: 1.6rem;
+  color: rgba(255, 255, 255, 0.822);
+}
+
+.socialWrap {
+  display: flex;
+  gap: 1rem;
+}
+
+.link:hover {
+  color: rgb(210 65 21);
+}
+
+.link:hover svg {
+  fill: rgb(210 65 21);
+}
+
+.footImg {
+  width: 2.4rem;
+  height: 2.4rem;
+  display: inline-block;
+  padding: 0.2rem;
+}
+
+.footImgCont {
+  display: flex;
+  gap: 0.3rem;
+  padding-bottom: 1rem;
+}
+
+.downImg {
+  width: 11.4rem;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.719);
+}
+
+.contactCont {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.copyContainer {
+  padding: 4rem;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.774);
+  border-top: 1px solid rgba(255, 255, 255, 0.774);
+  margin-top: 6rem;
+}
+
+.termsCont {
+  display: flex;
+  gap: 2rem;
+}

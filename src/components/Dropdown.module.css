@@ -69,3 +69,21 @@ svg {
 .dropdownItem:hover {
   background-color: #dddddd5e;
 }
+
+/* Additional styles for color variants */
+.red .dropdownToggle {
+  background-color: var(--color-red);
+}
+
+.red svg {
+  fill: var(--color-white);
+}
+
+.white .dropdownToggle {
+  background-color: var(--color-white);
+  color: rgba(30, 41, 59, 0.637); /* Dark text color for white button */
+}
+
+.white svg {
+  fill: rgba(30, 41, 59, 0.63); /* Dark fill for SVG */
+}

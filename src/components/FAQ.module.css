@@ -1,0 +1,72 @@
+.faqWrapper {
+  max-width: 153.6rem;
+  margin: 0 auto;
+  display: flex;
+  padding: 8rem 0;
+  background-color: rgb(251, 252, 253);
+  color: rgb(71 85 105);
+  font-weight: 500;
+  font-family: Noto Sans Devanagari, Inter var, Inter, ui-sans-serif, system-ui,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol,
+    "Noto Color Emoji";
+}
+
+.faqInfo {
+  padding: 0 6rem;
+  width: 40%;
+}
+
+.faqInfo h1 {
+  font-size: 2rem;
+}
+
+.faqInfo p {
+  font-size: 1.6rem;
+}
+
+.faqContainer {
+  width: 80%;
+  margin: auto;
+}
+
+.faqItem {
+  padding: 0.5rem 0;
+  padding-top: 1.2rem;
+  border-bottom: 1px solid #ccccccc7;
+  font-size: 1.6rem;
+  font-weight: 600;
+  /* margin: auto 0; */
+}
+
+.question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.arrow svg {
+  fill: rgb(148 163 184);
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  font-weight: 400;
+}
+
+.show {
+  max-height: 100rem;
+  padding: 1rem;
+}
+
+.hide {
+  max-height: 0;
+  padding: 0 1rem;
+}

@@ -1,0 +1,126 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 30px;
+}
+
+.gridItem {
+  background-color: white;
+  padding: 2.5rem 0;
+  padding-left: 1.5rem;
+  border-bottom: 1px solid rgb(202 213 225);
+}
+
+.gridItem:hover {
+  border-radius: 1.2rem;
+  background-color: rgb(241 245 249);
+  cursor: pointer;
+}
+
+.bookmark {
+  display: inline-block;
+  position: relative;
+  background-color: rgb(148 163 184); /* Background color */
+  color: white;
+  padding: 3px 6px;
+  padding-top: 6px;
+  font-size: 1.2rem;
+  text-align: center;
+  border-radius: 4px; /* Rounded corners */
+}
+
+.bookmark::before,
+.bookmark::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-radius: 4px;
+}
+
+/* Top right triangle */
+.bookmark::before {
+  top: 2px;
+  right: -11px;
+  border-width: 0 17px 13px 0;
+  border-color: transparent rgb(148 163 184) transparent transparent;
+  rotate: 270deg;
+}
+
+/* Bottom right triangle */
+.bookmark::after {
+  bottom: 0;
+  right: -9px;
+  border-width: 17px 0 0 13px;
+  border-color: transparent transparent transparent rgb(148 163 184);
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 500;
+  padding-top: 16px;
+}
+
+.duration,
+.price {
+  color: rgba(0, 0, 0, 0.623);
+  padding-top: 4px;
+}
+.desc {
+  color: rgba(0, 0, 0, 0.623);
+  padding-top: 6px;
+  font-size: 1.6rem;
+}
+.duration {
+  padding-top: 8px;
+}
+
+.price {
+  padding-bottom: 10px;
+}
+.originalPrice {
+  text-decoration: line-through;
+  font-family: inherit;
+  color: rgba(0, 0, 0, 0.623);
+  margin-left: 1rem;
+}
+
+.lang {
+  padding: 1px 5px;
+  padding-top: 3px;
+  background-color: rgb(199 230 248);
+  border-radius: 4px;
+  color: rgba(0, 0, 0, 0.781);
+  font-size: 1.2rem;
+}
+
+.ctaBtn {
+  border: none;
+  background-color: transparent;
+  color: rgb(234 88 12);
+  margin-top: 16px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.ctaBtn:hover {
+  color: rgb(194 45 1);
+}
+
+.ctaBtnSep {
+  height: 15px;
+  width: 1px;
+  background-color: rgb(202 213 225);
+  align-self: end;
+}
+
+.ctaBtnCont {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.ctaBtn:nth-child(2) {
+  margin-left: 20px;
+}
