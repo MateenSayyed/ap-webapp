@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Dropdown.module.css";
 
-const Dropdown = ({ title, items, menuWidth, menuPosition }) => {
+const Dropdown = ({ title, items, menuWidth, menuPosition, color }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => {
@@ -27,7 +27,11 @@ const Dropdown = ({ title, items, menuWidth, menuPosition }) => {
   };
 
   return (
-    <div className={styles.dropdown}>
+    <div
+      className={`${styles.dropdown} ${
+        color === "red" ? styles.red : styles.white
+      }`}
+    >
       <button onClick={toggleDropdown} className={styles.dropdownToggle}>
         {title}
         <span className={`${styles.arrow} ${isOpen ? styles.arrowOpen : ""}`}>
