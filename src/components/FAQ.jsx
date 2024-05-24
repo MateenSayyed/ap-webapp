@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./FAQ.module.css";
 import axios from "axios";
+import Loader from "./Loader";
 
 const FAQ = () => {
   const [activeIndex, setActiveIndex] = useState(null);
   const [faqs, setFaqs] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     async function fetchFAQ() {
@@ -14,6 +16,7 @@ const FAQ = () => {
         );
         const data = await res.data;
         setFaqs(data);
+        setIsLoading(false);
       } catch (error) {
         console.error("There was an error", error);
       }
@@ -36,6 +39,7 @@ const FAQ = () => {
         </p>
       </div>
       <div className={styles.faqContainer}>
+        {isLoading && <Loader />}
         {faqs &&
           faqs.map((faq, index) => (
             <div key={index} className={styles.faqItem}>

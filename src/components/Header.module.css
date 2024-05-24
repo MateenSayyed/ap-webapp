@@ -6,6 +6,9 @@
   font-weight: 500;
   background-color: rgb(210 65 21);
   color: var(--color-white);
+  padding: 0 1.6rem;
+  padding-right: 3.2rem;
+  white-space: nowrap;
 }
 
 a {
@@ -14,18 +17,44 @@ a {
 
 .sitelogo {
   margin-top: 0.5rem;
-  margin-right: 0.2rem;
+  margin-right: 0.8rem;
   width: 3.2rem;
   height: 3.2rem;
   border-radius: 9999px;
 }
 
+.activeLink {
+  background-color: rgb(234 88 12);
+}
+
 .leftnav {
   display: flex;
-  gap: 1.2rem;
   cursor: pointer;
   height: 100%;
   align-items: center;
+}
+
+.bigLinks {
+  padding: 0 1.6rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bannerleftnav {
+  display: flex;
+  gap: 1.2rem;
+  height: 100%;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.bannerrightnav {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  font-size: 1.4rem;
+  white-space: nowrap;
 }
 
 .rightnav {
@@ -48,9 +77,20 @@ span {
   align-items: center;
 }
 
+.bannerwrapper {
+  min-height: 5.7rem;
+  max-width: 153.6rem;
+  margin: 0 auto;
+  display: flex;
+  padding: 0 3.2rem;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+  gap: 2rem;
+}
+
 .banner {
-  height: 4.6rem;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   color: rgb(255 255 255);
   background-color: rgb(30 41 59);
 }
@@ -82,9 +122,61 @@ span {
 }
 
 .redball {
-  height: 1.6rem;
-  width: 1.6rem;
+  min-height: 1.6rem;
+  min-width: 1.6rem;
   border-radius: 50%;
   background-color: rgb(220 38 38);
   border: 1px solid white;
+}
+
+@media (1023px <= width <= 1535px) {
+  .bigLinks {
+    padding: 0 1rem;
+  }
+}
+
+@media (width <= 1023px) {
+  .header {
+    padding: 0;
+    padding-right: 1.6rem;
+  }
+
+  .wrapper {
+    padding-right: 0;
+  }
+
+  .bannerwrapper {
+    justify-content: space-between;
+    padding: 0 1.6rem;
+    font-size: 1.4rem;
+  }
+
+  .bigLinks {
+    padding: 0 0.6rem;
+  }
+
+  .phone,
+  .ham div,
+  .media {
+    display: none;
+    padding: 0;
+  }
+}
+
+@media (width< 768px) {
+  .bigLinks {
+    display: none;
+  }
+
+  .leftnav {
+    width: 100%;
+    justify-content: space-between;
+    padding-right: 1.2rem;
+  }
+
+  .donate {
+    border: 1px solid var(--color-white);
+    padding: 0 0.8rem;
+    border-radius: 6px;
+  }
 }

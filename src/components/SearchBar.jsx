@@ -1,19 +1,10 @@
-import { useEffect, useState } from "react";
 import styles from "./SearchBar.module.css";
 import SearchDropdown from "./SearchDropdown";
-import axios from "axios";
 
 const SearchBar = () => {
   return (
     <div className={styles.searchbar}>
       <div className={styles.dropdownwrap}>
-        {/* <Dropdown
-          title="All"
-          items={[]}
-          menuWidth="15rem"
-          menuPosition="left"
-          color="white"
-        /> */}
         <SearchDropdown />
       </div>
       <div className={styles.inputwrapper}>

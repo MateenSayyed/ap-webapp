@@ -1,5 +1,11 @@
 @import "./vars.css";
 
+.border {
+  border: 1px solid white;
+  padding: 1px 2px;
+  border-radius: 4px;
+}
+
 .dropdown {
   position: relative;
   display: inline-block;
@@ -19,6 +25,9 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.dropdownToggle:hover {
+  background-color: rgb(234 88 12);
 }
 
 .arrow {
@@ -58,6 +67,7 @@ svg {
   scale: 1;
   transform: translate(scale(0));
   pointer-events: auto;
+  z-index: 11;
 }
 
 .dropdownItem {
@@ -66,11 +76,14 @@ svg {
   border-radius: 5px;
 }
 
+.dropdownToggle span {
+  font-size: 1.4rem;
+}
+
 .dropdownItem:hover {
   background-color: #dddddd5e;
 }
 
-/* Additional styles for color variants */
 .red .dropdownToggle {
   background-color: var(--color-red);
 }

@@ -1,6 +1,6 @@
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   column-gap: 30px;
 }
 
@@ -20,13 +20,13 @@
 .bookmark {
   display: inline-block;
   position: relative;
-  background-color: rgb(148 163 184); /* Background color */
+  background-color: rgb(148 163 184);
   color: white;
   padding: 3px 6px;
   padding-top: 6px;
   font-size: 1.2rem;
   text-align: center;
-  border-radius: 4px; /* Rounded corners */
+  border-radius: 4px;
 }
 
 .bookmark::before,
@@ -123,4 +123,25 @@
 
 .ctaBtn:nth-child(2) {
   margin-left: 20px;
+}
+
+@media (width <= 1535px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (width <= 1023px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width < 768px) {
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .gridItem {
+    padding-left: 0;
+  }
 }

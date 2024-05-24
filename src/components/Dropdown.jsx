@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import styles from "./Dropdown.module.css";
 
-const Dropdown = ({ title, items, menuWidth, menuPosition, color }) => {
+const Dropdown = ({ title, items, menuWidth, menuPosition, color, border }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => {
@@ -32,8 +32,15 @@ const Dropdown = ({ title, items, menuWidth, menuPosition, color }) => {
         color === "red" ? styles.red : styles.white
       }`}
     >
-      <button onClick={toggleDropdown} className={styles.dropdownToggle}>
-        {title}
+      <button
+        onClick={toggleDropdown}
+        className={`${styles.dropdownToggle} ${
+          border === "true" ? styles.border : ""
+        }`}
+      >
+        <span className={`${border === "true" ? styles.border : ""}`}>
+          {title}
+        </span>
         <span className={`${styles.arrow} ${isOpen ? styles.arrowOpen : ""}`}>
           <svg
             xmlns="http://www.w3.org/2000/svg"

@@ -3,6 +3,7 @@ import styles from "./Header.module.css";
 import { useState } from "react";
 import Dropdown from "./Dropdown";
 import Menu from "./Menu";
+import MobileNav from "./MobileNav";
 
 function Header() {
   const dropdownItemsLive = ["Gita Samagam", "Vedanta: Basics to Classics"];
@@ -18,7 +19,6 @@ function Header() {
   return (
     <>
       <div className={styles.header}>
-        {console.log(isMenu)}
         <div className={styles.wrapper}>
           <div className={styles.leftnav}>
             <div>
@@ -31,10 +31,10 @@ function Header() {
               </a>
             </div>
 
-            <div>
+            <div className={styles.bigLinks}>
               <a href="#">Home</a>
             </div>
-            <div>
+            <div className={styles.bigLinks}>
               <a href="#">
                 <Dropdown
                   title="Live Sessions"
@@ -46,19 +46,19 @@ function Header() {
               </a>
             </div>
 
-            <div>
+            <div className={`${styles.bigLinks} ${styles.activeLink}`}>
               <a href="#">Video Series</a>
             </div>
 
-            <div>
+            <div className={styles.bigLinks}>
               <a href="#">AP Books </a>
             </div>
 
-            <div>
+            <div className={styles.bigLinks}>
               <a href="#">AP Articles</a>
             </div>
 
-            <div>
+            <div className={`${styles.dropDownHigh} ${styles.bigLinks}`}>
               <a href="#">
                 <Dropdown
                   title="Invite"
@@ -69,13 +69,13 @@ function Header() {
                 />
               </a>
             </div>
-            <div>
+            <div className={`${styles.media} ${styles.bigLinks}`}>
               <a href="#">In Media</a>
             </div>
-            <div>
+            <div className={`${styles.media} ${styles.bigLinks}`}>
               <a href="#">Careers</a>
             </div>
-            <div>
+            <div className={`${styles.media} ${styles.bigLinks}`}>
               <a href="#">Donate</a>
             </div>
           </div>
@@ -83,6 +83,7 @@ function Header() {
             <div>
               <a href="#">
                 <Dropdown
+                  border="true"
                   title="EN"
                   items={dropdownItemsLang}
                   menuWidth="8rem"
@@ -123,17 +124,18 @@ function Header() {
               <div>Menu</div>
             </div>
 
+            {isMenu && <MobileNav isMenu={isMenu} toggleMenu={toggleMenu} />}
             {isMenu && <Menu isMenu={isMenu} toggleMenu={toggleMenu} />}
           </div>
         </div>
       </div>
       <div className={styles.banner}>
-        <div className={styles.wrapper}>
-          <div className={styles.leftnav}>
+        <div className={styles.bannerwrapper}>
+          <div className={styles.bannerleftnav}>
             <div className={styles.redball}></div> Acharya Prashant is dedicated
             to building a brighter future for you
           </div>
-          <div className={`${styles.rightnav} ${styles.navBtn} `}>
+          <div className={`${styles.bannerrightnav} ${styles.navBtn} `}>
             <a href="#">Extend your hand</a>
           </div>
         </div>

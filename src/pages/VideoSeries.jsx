@@ -5,9 +5,11 @@ import VideoGrid from "../components/VideoGrid";
 import FAQ from "../components/FAQ";
 import Footer from "../components/Footer";
 import axios from "axios";
+import Loader from "../components/Loader";
 
 function VideoSeries() {
   const [data, setData] = useState();
+  const [isloading, setIsLoading] = useState(true);
 
   useEffect(() => {
     async function fetchFAQ() {
@@ -17,6 +19,7 @@ function VideoSeries() {
         );
         const resp = await res.data;
         setData(resp);
+        setIsLoading(false);
       } catch (error) {
         console.error("There was an error", error);
       }
@@ -28,6 +31,7 @@ function VideoSeries() {
   return (
     <>
       <PageHeader />
+      {isloading && <Loader />}
       {data && (
         <div className={styles.container}>
           <div className={styles.breadCrumb}>
@@ -44,15 +48,17 @@ function VideoSeries() {
                 d="M.793 10.207a1 1 0 0 1 0-1.414L4.086 5.5.793 2.207A1 1 0 0 1 2.207.793l4 4a1 1 0 0 1 0 1.414l-4 4a1 1 0 0 1-1.414 0"
               ></path>
             </svg>
-            <div>santawani</div>
+            <div>संतवाणी</div>
           </div>
+
           <div className={styles.title}>{data.details.title}</div>
           <div className={styles.hero}>
-            <img
-              className={styles.heroimg}
-              alt="Thumbnail"
-              src="https://cimg.acharyaprashant.org/images/img-4337ee73-d8a3-4c8b-951b-d09a5a6468d3/10/image.jpg"
-            />
+            <div className={styles.heroimg}>
+              <img
+                alt="Thumbnail"
+                src="https://cimg.acharyaprashant.org/images/img-4337ee73-d8a3-4c8b-951b-d09a5a6468d3/10/image.jpg"
+              />
+            </div>
             <section className={styles.herotext}>
               <h2>{data.details.subtitle}</h2>
               <div>{data.details.description}</div>
@@ -123,9 +129,9 @@ function VideoSeries() {
             Video Series ({data.details.coursesCount})
           </div>
           <VideoGrid items={data.courses} />
-          <FAQ />
         </div>
       )}
+      <FAQ />
       <Footer />
     </>
   );

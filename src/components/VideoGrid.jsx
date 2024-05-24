@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./VideoGrid.module.css";
 
 const VideoGrid = ({ items }) => {

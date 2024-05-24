@@ -1,0 +1,24 @@
+.loader {
+  width: 40px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 4px solid lightblue;
+  border-right-color: rgb(210 65 21);
+  animation: l2 1s infinite linear;
+}
+
+.loaderCont {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.2rem;
+}
+
+@keyframes l2 {
+  to {
+    transform: rotate(1turn);
+  }
+}
