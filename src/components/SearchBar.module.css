@@ -13,6 +13,7 @@
   height: 100%;
   min-width: 10%;
   border-right: 1px solid #e5e7eb;
+  padding-right: 2rem;
 }
 
 .input:focus {
@@ -45,6 +46,7 @@
   background-color: rgb(254, 215, 170);
   margin-right: 0;
   margin-left: auto;
+  cursor: pointer;
 }
 
 .searchicon svg {
@@ -53,8 +55,14 @@
 }
 
 .dropdownwrap {
+  height: 100%;
   display: flex;
   align-items: center;
-  margin-left: 2rem;
   position: relative;
+}
+
+@media (width< 768px) {
+  .searchbar {
+    display: none;
+  }
 }

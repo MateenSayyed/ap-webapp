@@ -11,7 +11,7 @@
 
 .linkContainer {
   display: flex;
-  gap: 2rem;
+  justify-content: space-between;
 }
 
 .linkWrap {
@@ -81,4 +81,22 @@
 .termsCont {
   display: flex;
   gap: 2rem;
+}
+
+@media (width< 768px) {
+  .linkContainer {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .footContainer {
+    padding: 4rem 3.2rem;
+  }
+
+  .copyContainer {
+    flex-direction: column;
+    align-items: start;
+    padding: 2rem 0;
+    font-size: 1.2rem;
+  }
 }

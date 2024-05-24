@@ -2,7 +2,7 @@
   max-width: 153.6rem;
   margin: 0 auto;
   display: flex;
-  padding: 8rem 0;
+  padding: 8rem 8rem;
   background-color: rgb(251, 252, 253);
   color: rgb(71 85 105);
   font-weight: 500;
@@ -12,8 +12,7 @@
 }
 
 .faqInfo {
-  padding: 0 6rem;
-  width: 40%;
+  width: 25%;
 }
 
 .faqInfo h1 {
@@ -25,8 +24,13 @@
 }
 
 .faqContainer {
-  width: 80%;
+  width: 70%;
   margin: auto;
+  padding-left: 4rem;
+}
+
+.faqItem:last-child {
+  border: none;
 }
 
 .faqItem {
@@ -50,6 +54,10 @@
   fill: rgb(148 163 184);
 }
 
+.arrow {
+  padding-right: 1rem;
+}
+
 .rotate {
   transform: rotate(180deg);
 }
@@ -69,4 +77,31 @@
 .hide {
   max-height: 0;
   padding: 0 1rem;
+}
+
+@media (768px< width <= 1023px) {
+  .faqWrapper {
+    padding: 6.4rem 1.6rem;
+  }
+}
+
+@media (width<768px) {
+  .faqWrapper {
+    flex-direction: column;
+    padding: 6.4rem 1.6rem;
+  }
+
+  .faqInfo {
+    width: 100%;
+    padding-bottom: 2.8rem;
+  }
+
+  .faqContainer {
+    width: 100%;
+    padding: 0;
+  }
+
+  .question {
+    padding: 1rem 0;
+  }
 }
