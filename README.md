@@ -7,7 +7,6 @@ A replication of the following page: https://acharyaprashant.org/hi/video-module
 - [Introduction](#introduction)
 - [Features](#features)
 - [Installation](#installation)
-- [Usage](#usage)
 - [Contact](#contact)
 
 ## Introduction
@@ -28,28 +27,47 @@ AP WebApp is designed to provide an efficient solution to the given problem stat
 
 To get a local copy up and running, follow these simple steps:
 
-### Prerequisites
+#### Prerequisites
 
 Ensure you have the following installed on your local machine:
 
 - [Node.js](https://nodejs.org/en/download/) (which includes npm)
 - [Git](https://git-scm.com/downloads)
 
-### Clone the Repository
+#### 1. Open Command Prompt (CMD)
+Open the Command Prompt on your computer:
+
+Windows:
+Open File Explorer.
+Navigate to the folder where you want to open Command Prompt.
+Click on the address bar and type `cmd`.
+Press Enter to open Command Prompt in that directory.
+
+
+MacOS:
+Open Finder.
+Navigate to the folder where you want to open Terminal.
+Right-click on the folder.
+Select `New Terminal at Folder` from the context menu.
+
+
+#### 2. Clone the Repository
 
 ```
 git clone https://github.com/MateenSayyed/ap-webapp.git
-
 ```
-### Install Dependencies
-Navigate to the project directory and install the necessary dependencies:
+#### 3.Navigate to the project directory
+
 ```
 cd ap-webapp
-npm install
+```
+#### 4.Install the necessary dependencies:
 
 ```
-### Usage
-Running the Development Server
+npm install
+```
+
+#### 5.Usage
 To start the development server, run:
 
 ```
